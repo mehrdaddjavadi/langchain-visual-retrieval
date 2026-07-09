@@ -1,20 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-label="langchain visual retrieval logo">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-label="LangChain visual retrieval logo with a camera icon and provider chips">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#111827"/>
-      <stop offset="100%" stop-color="#273449"/>
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#182338"/>
     </linearGradient>
     <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#38bdf8"/>
       <stop offset="100%" stop-color="#8b5cf6"/>
     </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#020617" flood-opacity="0.38"/>
+    </filter>
   </defs>
-  <rect width="640" height="220" rx="32" fill="url(#bg)"/>
-  <rect x="44" y="44" width="132" height="132" rx="24" fill="none" stroke="url(#accent)" stroke-width="8"/>
-  <rect x="68" y="68" width="84" height="84" rx="16" fill="#0f172a"/>
-  <path d="M90 126 L118 98 L146 126" fill="none" stroke="#f8fafc" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M90 98 L118 126 L146 98" fill="none" stroke="#38bdf8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-  <text x="220" y="96" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">langchain</text>
-  <text x="220" y="136" fill="#38bdf8" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">visual retrieval</text>
-  <text x="220" y="168" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="16">Search documents by how they look</text>
+
+  <rect width="640" height="220" rx="30" fill="url(#bg)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="28" y="34" width="584" height="152" rx="24" fill="#111827" stroke="#243244" stroke-width="1.2"/>
+  </g>
+
+  <g transform="translate(50 48)">
+    <rect x="0" y="0" width="126" height="124" rx="26" fill="#0b1220" stroke="url(#accent)" stroke-width="6"/>
+
+    <rect x="28" y="28" width="70" height="50" rx="12" fill="#0f172a" stroke="#f8fafc" stroke-width="4"/>
+    <circle cx="63" cy="53" r="16" fill="none" stroke="#38bdf8" stroke-width="5"/>
+    <circle cx="63" cy="53" r="7" fill="#8b5cf6"/>
+    <rect x="40" y="18" width="46" height="8" rx="4" fill="#f8fafc"/>
+    <rect x="46" y="10" width="34" height="6" rx="3" fill="#8b5cf6"/>
+    <path d="M22 90 L104 90" stroke="#f8fafc" stroke-width="4" stroke-linecap="round"/>
+    <path d="M34 84 L48 100" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+    <path d="M78 84 L92 100" stroke="#8b5cf6" stroke-width="4" stroke-linecap="round"/>
+    <rect x="96" y="78" width="16" height="16" rx="4" fill="#38bdf8"/>
+  </g>
+
+  <g transform="translate(208 58)">
+    <text x="0" y="24" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="700">langchain</text>
+    <text x="0" y="54" fill="#38bdf8" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="700">visual retrieval</text>
+    <text x="0" y="78" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="13">Vision-native retrieval for images, pages, and documents</text>
+
+    <g transform="translate(0 96)">
+      <rect x="0" y="0" width="90" height="24" rx="12" fill="#0b1220" stroke="#38bdf8" stroke-width="1.3"/>
+      <circle cx="16" cy="12" r="4" fill="#38bdf8"/>
+      <text x="28" y="16" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600">PixelRAG</text>
+
+      <rect x="100" y="0" width="74" height="24" rx="12" fill="#0b1220" stroke="#8b5cf6" stroke-width="1.3"/>
+      <circle cx="116" cy="12" r="4" fill="#8b5cf6"/>
+      <text x="128" y="16" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600">CLIP</text>
+
+      <rect x="184" y="0" width="74" height="24" rx="12" fill="#0b1220" stroke="#38bdf8" stroke-width="1.3"/>
+      <circle cx="200" cy="12" r="4" fill="#38bdf8"/>
+      <text x="212" y="16" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600">BLIP</text>
+
+      <rect x="268" y="0" width="78" height="24" rx="12" fill="#0b1220" stroke="#8b5cf6" stroke-width="1.3"/>
+      <circle cx="284" cy="12" r="4" fill="#8b5cf6"/>
+      <text x="296" y="16" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="600">LLaVA</text>
+    </g>
+  </g>
 </svg>
