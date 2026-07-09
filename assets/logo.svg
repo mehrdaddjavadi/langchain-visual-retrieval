@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 220" role="img" aria-label="langchain visual retrieval logo">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#273449"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="220" rx="32" fill="url(#bg)"/>
+  <rect x="44" y="44" width="132" height="132" rx="24" fill="none" stroke="url(#accent)" stroke-width="8"/>
+  <rect x="68" y="68" width="84" height="84" rx="16" fill="#0f172a"/>
+  <path d="M90 126 L118 98 L146 126" fill="none" stroke="#f8fafc" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M90 98 L118 126 L146 98" fill="none" stroke="#38bdf8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="220" y="96" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">langchain</text>
+  <text x="220" y="136" fill="#38bdf8" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">visual retrieval</text>
+  <text x="220" y="168" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="16">Search documents by how they look</text>
+</svg>

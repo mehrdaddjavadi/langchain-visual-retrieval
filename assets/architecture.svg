@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 520" role="img" aria-label="Architecture diagram for langchain visual retrieval">
+  <rect width="980" height="520" rx="24" fill="#0f172a"/>
+  <text x="70" y="70" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="26" font-weight="700">langchain-visual-retrieval architecture</text>
+  <text x="70" y="98" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="15">A provider-based bridge from LangChain-style retrieval to vision-native backends.</text>
+
+  <rect x="70" y="130" width="210" height="118" rx="16" fill="#111827" stroke="#38bdf8" stroke-width="2"/>
+  <text x="175" y="168" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="700" text-anchor="middle">User Query</text>
+  <text x="175" y="195" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle">Text or image input</text>
+
+  <rect x="330" y="130" width="230" height="118" rx="16" fill="#111827" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="445" y="168" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">VisualRetriever</text>
+  <text x="445" y="195" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle">Provider-agnostic entry point</text>
+
+  <rect x="620" y="130" width="290" height="118" rx="16" fill="#111827" stroke="#38bdf8" stroke-width="2"/>
+  <text x="765" y="168" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">BaseVisualProvider</text>
+  <text x="765" y="195" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle">Shared interface for backends</text>
+
+  <rect x="330" y="320" width="230" height="118" rx="16" fill="#111827" stroke="#34d399" stroke-width="2"/>
+  <text x="445" y="358" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">PixelRAGProvider</text>
+  <text x="445" y="385" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle">Calls the visual search API</text>
+
+  <rect x="70" y="320" width="210" height="118" rx="16" fill="#111827" stroke="#f59e0b" stroke-width="2"/>
+  <text x="175" y="358" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">VisualDocument</text>
+  <text x="175" y="385" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle">Structured results model</text>
+
+  <rect x="620" y="320" width="290" height="118" rx="16" fill="#111827" stroke="#f472b6" stroke-width="2"/>
+  <text x="765" y="358" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle">LangChain Document</text>
+  <text x="765" y="385" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle">Compatibility adapter output</text>
+
+  <path d="M280 189 L330 189" stroke="#94a3b8" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M560 189 L620 189" stroke="#94a3b8" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M445 248 L445 320" stroke="#94a3b8" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M280 379 L330 379" stroke="#94a3b8" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M560 379 L620 379" stroke="#94a3b8" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <circle cx="445" cy="248" r="8" fill="#38bdf8"/>
+</svg>
