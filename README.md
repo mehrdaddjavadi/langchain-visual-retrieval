@@ -8,6 +8,86 @@ langchain-visual-retrieval is a lightweight, provider-based visual retrieval pac
 
 This project is not a fork of LangChain or PixelRAG. Instead, it provides a reusable integration layer that lets LangChain-style applications work with visual retrieval backends through a small and stable interface.
 
+## Why Visual Retrieval?
+
+Most Retrieval-Augmented Generation (RAG) pipelines begin by converting documents into plain text before creating embeddings.
+
+The typical workflow looks like this:
+
+```text
+Document
+      │
+Text Extraction
+      │
+Chunking
+      │
+Text Embeddings
+      │
+Vector Search
+```
+
+This approach works extremely well for text-centric documents. However, many real-world documents contain information that cannot be faithfully represented as plain text.
+
+Examples include:
+
+- UI screenshots
+- dashboards
+- presentation slides
+- engineering drawings
+- scientific figures
+- architecture diagrams
+- scanned PDFs
+- web pages
+- complex tables
+- forms
+
+During text extraction and chunking, important visual information may be lost or significantly reduced, including:
+
+- document layout
+- spatial relationships
+- table structure
+- visual hierarchy
+- relative positioning
+- typography
+- graphical semantics
+- interface organization
+
+As a result, two visually different documents may become nearly identical after being converted into text, making retrieval more difficult for visually rich content.
+
+Visual Retrieval takes a fundamentally different approach.
+
+Instead of treating extracted text as the primary representation of a document, it treats the rendered visual page itself as the source of information.
+
+```text
+Rendered Document
+        │
+Visual Embeddings
+        │
+Visual Index
+        │
+Visual Search
+```
+
+By embedding the visual representation rather than relying solely on extracted text, the retrieval pipeline can preserve information that traditional text chunking often cannot represent.
+
+This makes it possible to retrieve information based on how a document actually looks, not only on the words it contains.
+
+Traditional RAG asks:
+
+> **"What words exist in this document?"**
+
+Visual Retrieval asks:
+
+> **"What information is visible in this document?"**
+
+Visual Retrieval is not intended to replace traditional text retrieval.
+
+Instead, it complements existing RAG pipelines by enabling retrieval over information that is inherently visual. Applications can combine both approaches depending on the characteristics of the underlying documents.
+
+This provider-based architecture brings that capability to the LangChain ecosystem while remaining independent of any specific visual retrieval engine. PixelRAG serves as the first provider implementation, demonstrating how vision-native retrieval engines can integrate through a stable, reusable interface.
+
+As multimodal AI continues to evolve, preserving the visual structure of documents will become increasingly important for Retrieval-Augmented Generation, enterprise search, document understanding, and next-generation AI assistants.
+
 ## Why this matters
 
 Traditional retrieval systems work well for text, but they often miss the information that lives in layout, structure, and appearance. A chart, a UI screenshot, a diagram, or a table can contain meaning that plain text parsing loses.
@@ -152,3 +232,7 @@ If you use PixelRAG as a backend, please follow the relevant PixelRAG licensing 
 langchain-visual-retrieval introduces a practical and extensible path for bringing visual retrieval into LangChain-based systems. It is especially useful when search needs to understand the appearance of documents, not just their text content.
 
 If you are working on multimodal search, screenshot retrieval, visual document understanding, or layout-aware RAG, this package provides a clean starting point.
+
+Ultimately, the goal of this project is not to replace LangChain's existing retrieval ecosystem, but to extend it with a missing capability: Vision-Native Retrieval.
+
+Just as text embeddings made semantic search practical for natural language, visual retrieval opens the door to searching information that lives in layout, appearance, and visual structure—without forcing every document to be reduced to plain text first.
