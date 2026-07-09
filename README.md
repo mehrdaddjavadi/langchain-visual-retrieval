@@ -1,7 +1,7 @@
 # langchain-visual-retrieval
 
 <p align="center">
-  <img src="assets/logo.svg" alt="langchain-visual-retrieval logo" width="70%" />
+  <img src="https://raw.githubusercontent.com/mehrdaddjavadi/langchain-visual-retrieval/master/assets/logo.svg" alt="langchain-visual-retrieval logo" width="70%" />
 </p>
 
 langchain-visual-retrieval is a lightweight, provider-based visual retrieval package for LangChain. It adds a clean abstraction for vision-native search so applications can retrieve information from screenshots, diagrams, charts, and other visual content instead of relying only on plain text chunking.
@@ -205,7 +205,7 @@ print(documents[0].metadata)
 ## Architecture at a glance
 
 <p align="center">
-  <img src="assets/architecture.svg" alt="Architecture diagram for langchain-visual-retrieval" width="100%" />
+  <img src="https://raw.githubusercontent.com/mehrdaddjavadi/langchain-visual-retrieval/master/assets/architecture.svg" alt="Architecture diagram for langchain-visual-retrieval" width="100%" />
 </p>
 
 The package follows a simple dependency flow:
