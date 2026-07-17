@@ -202,6 +202,59 @@ documents = retriever.as_documents("Find the deployment screenshot")
 print(documents[0].metadata)
 ```
 
+## Geospatial Vector Retrieval (v0.1.3)
+
+In addition to visual retrieval, this package now includes native geospatial vector retrieval for Shapefile and GeoPackage datasets. Search geographic features using spatial predicates (bounding box, intersection, containment, nearest-neighbor) and attribute filtering, returning LangChain-compatible documents.
+
+### Geospatial Quickstart
+
+```python
+from langchain_visual_retrieval import GeoVectorProvider, GeoRetriever
+from shapely.geometry import Point
+
+# Initialize provider and retriever
+provider = GeoVectorProvider()
+retriever = GeoRetriever(provider, source="path/to/data.shp")
+
+# Search by bounding box
+results = retriever.search_bbox(
+    bbox=(40.0, 30.0, 50.0, 40.0),  # (minx, miny, maxx, maxy)
+    limit=10
+)
+
+# Search by geometry intersection
+point = Point(45.0, 35.0)
+results = retriever.search_intersects(point, limit=5)
+
+# Combined spatial + attribute filtering
+results = retriever.search_bbox(
+    bbox=(40.0, 30.0, 50.0, 40.0),
+    where={"area": [">", 1000]},  # Filter by attribute
+    limit=10
+)
+
+# Access LangChain Document metadata
+for doc in results:
+    print(f"Feature: {doc.metadata['feature_id']}")
+    print(f"CRS: {doc.metadata['crs']}")
+    print(f"Geometry: {doc.page_content}")
+```
+
+### Supported Formats
+
+- **Shapefile** (.shp)
+- **GeoPackage** (.gpkg)
+
+### Query Types
+
+- **Bounding box search**: `search_bbox(bbox)`
+- **Geometry intersection**: `search_intersects(geometry)`
+- **Geometry containment**: `search_contains(geometry)`
+- **Nearest-neighbor**: `search_nearest(geometry, k)`
+- **Spatial + Attribute filtering**: All query types support optional `where` parameter
+
+Geospatial retrieval is designed for production use with real geographic datasets. All spatial queries use efficient STRtree indexing; no full-dataset scans are performed.
+
 ## Architecture at a glance
 
 <p align="center">

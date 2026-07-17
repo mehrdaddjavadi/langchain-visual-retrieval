@@ -4,13 +4,16 @@ build-backend = "hatchling.build"
 
 [project]
 name = "langchain-visual-retrieval"
-version = "0.1.1"
-description = "Provider-based visual retrieval for LangChain with PixelRAG support"
+version = "0.1.3"
+description = "Provider-based visual retrieval for LangChain with PixelRAG support and native geospatial vector retrieval"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
     "langchain-core>=1.4.7,<2.0.0",
     "pydantic>=2.0.0,<3.0.0",
+    "pyogrio>=0.8.0",
+    "geopandas>=0.14.0",
+    "shapely>=2.0.0",
 ]
 classifiers = [
     "Development Status :: 3 - Alpha",
